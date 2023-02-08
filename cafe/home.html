@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Cafe</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav class="navigation">
+      <ul>
+        <li>
+          <a href="./home.html">Home</a>
+        </li>
+        <li>
+          <a href="./about.html">About</a>
+        </li>
+        <li><a href="./menu.html">Menu</a></li>
+        <li><a href="./where.html">Where</a></li>
+      </ul>
+    </nav>
+    <img
+      width="100%"
+      src="https://www.w3schools.com/w3images/coffeehouse.jpg"
+      alt="The Cafe Image"
+    />
+    <div class="title">
+      <h1>The</h1>
+      <h1>Cafe</h1>
+    </div>
+    <section class="aboutSection">
+      <h4><span>About the cafe</span></h4>
+      <div class="description">
+        <p>
+          The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit
+          amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          In addition to our full espresso and brew bar menu, we serve fresh
+          made-to-order breakfast and lunch sandwiches, as well as a selection
+          of sides and salads and other good stuff.
+        </p>
+        <blockquote>
+          "Use products from nature for what it's worth - but never too early,
+          nor too late." Fresh is the new sweet. <br />
+          <br />
+          Chef, Coffeeist and Owner: Liam Brown
+        </blockquote>
+        <img
+          width="600px"
+          src="https://www.w3schools.com/w3images/coffeeshop.jpg"
+          alt="Cafe interior"
+        />
+        <p><b>Opening hours:</b> everyday from 6am to 5pm.</p>
+        <p><b>Address:</b> 15 Adr street, 5015, NY</p>
+
+        <div class="reservation">
+          <p>
+            Reserve a table, ask for today's special or just send us a message:
+          </p>
+
+          <form action="./reservation.php" method="post">
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              class="inputField"
+            />
+            <input
+              type="number"
+              name="count"
+              placeholder="How many people"
+              class="inputField"
+            />
+            <input
+              type="datetime-local"
+              name="date-time"
+              placeholder="Date and Time"
+              class="inputField"
+            />
+            <input
+              type="text"
+              name="notes"
+              placeholder="Message \ Specical requirements"
+              class="inputField"
+            />
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

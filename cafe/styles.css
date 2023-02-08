@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inconsolata';
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('./Inconsolata.ttf');
+}
+
+.navigation {
+  background-color: black;
+  padding: 16px 8px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navigation > ul {
+  text-align: center;
+}
+
+.navigation > ul > li {
+  display: inline;
+  text-align: center;
+}
+
+.navigation > ul > li > a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 36px;
+  margin: 0 16px;
+}
+
+.navigation > ul > li > a:hover {
+  color: black;
+  background-color: white;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.aboutSection {
+  margin-top: 36px;
+  margin-bottom: 60px;
+}
+
+.aboutSection h4 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 36px;
+}
+
+.aboutSection h4 span {
+  background-color: #000;
+  padding: 8px 16px;
+}
+
+.aboutSection .description {
+  width: 600px;
+  margin: 0px auto;
+}
+
+.aboutSection .description p {
+  margin-bottom: 24px;
+}
+
+.aboutSection blockquote {
+  background-color: #f9f9f9;
+  padding: 16px;
+  border-left: 6px solid #ddd;
+  margin-bottom: 36px;
+}
+
+.inputField {
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  height: 50px;
+  padding: 0 8px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  color: white;
+  background-color: black;
+  height: 50px;
+  padding: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  color: #222;
+  background-color: #ddd;
+}
