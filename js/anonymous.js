@@ -1,1 +1,6 @@
-var sayHello = function () {};
+var sayHello = function () {
+  // defination
+  console.log('Hello Function');
+};
+
+sayHello();
