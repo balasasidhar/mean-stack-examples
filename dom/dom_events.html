@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document Events</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <form action="">
+      <label>First Name</label>
+      <input type="text" name="firstName" id="firstName" value="John" />
+      <br />
+      <br />
+      <label>Last Name</label>
+      <input type="text" name="lastName" id="lastName" value="David" />
+      <br />
+      <br />
+      <button type="submit" class="btn" onclick="greetUser()">Submit</button>
+      <button type="reset" class="btn">Clear</button>
+    </form>
+
+    <script>
+      var firstNameInput = window.document.getElementById('firstName');
+      var lastNameInput = window.document.getElementById('lastName');
+
+      function greetUser() {
+        var firstNameVal = firstNameInput.value;
+        var lastNameVal = lastNameInput.value;
+        alert('Hello, ' + firstNameVal + ' ' + lastNameVal + '!');
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="heading">Hello World</h1>
+    <img width="200" height="200" src="./bulb_off.png" id="bulbImgTag" />
+    <br />
+    <button type="button" onclick="toggleBulb()" id="btnToggle">Turn On</button>
+    <script>
+      var isBulbOn = false;
+      var bulbImgTag = document.getElementById('bulbImgTag');
+      var btnToggle = document.getElementById('btnToggle');
+
+      function toggleBulb() {
+        if (isBulbOn) {
+          bulbImgTag.src = './bulb_off.png';
+          isBulbOn = false;
+          btnToggle.innerHTML = 'Turn On';
+        } else {
+          isBulbOn = true;
+          bulbImgTag.src = './bulb_on.jpeg';
+          btnToggle.innerHTML = 'Turn Off';
+        }
+      }
+    </script>
+  </body>
+</html>
