@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background-color: crimson;
+    color: whitesmoke;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+section {
+    padding: 16px;
+}
+
+input {
+    height: 40px;
+    width: 300px;
+    padding: 0 8px;
+    background-color: azure;
+    border: 1px solid lightskyblue;
+    margin: 8px 0;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+button {
+    height: 40px;
+        width: 100px;
+        padding: 0 8px;
+        
+        background-color: rgb(2, 200, 160);
+        border: 1px solid rgb(54, 208, 149);
+        margin: 8px 0;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+}
+
+ul {
+    list-style: none;
+}
+
+li{
+    color: white;
+    background-color: rgb(17, 94, 236);
+    margin: 8px 0;
+    padding: 16px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
