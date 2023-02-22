@@ -21,3 +21,20 @@ console.log('Random Number ', randomNum);
 
 // hoisting in js
 var randomNum2;
+
+var firstName = 'Shiva'; // --> print value
+// Global scope
+function A() {
+  // local scope of func A
+  function B() {
+    // local scope of func B
+    var email;
+
+    function C() {
+      // local scope of func C
+      var lastName;
+
+      console.log(firstName);
+    }
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button" onclick="openWindow()">Open New Window</button>
+    <button type="button" onclick="closeWindow()">Close Window</button>
+    <button type="button" onclick="resizeWindow()">Resize Window</button>
+
+    <button type="button" onclick="alert('Hello World');">Show Alert</button>
+    <button type="button" onclick="confirmUser()">Delete</button>
+    <button type="button" onclick="promptUser()">Add User</button>
+
+    <script>
+      function openWindow() {
+        window.open('https://www.google.com');
+      }
+
+      function closeWindow() {
+        window.close();
+      }
+
+      function resizeWindow() {
+        window.resizeTo(300, 200);
+      }
+
+      function confirmUser() {
+        var response = confirm('Are you sure to delete this Object?');
+
+        if (response) {
+          console.log('File deleted');
+        } else {
+          console.log('Cancel to delete the File');
+        }
+      }
+
+      function promptUser() {
+        var newUser = prompt('Enter name');
+        console.log(newUser);
+      }
+    </script>
+  </body>
+</html>
