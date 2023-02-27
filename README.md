@@ -3,6 +3,9 @@
 ### Material
 1. [MEAN Stack Intro.pdf](https://github.com/balasasidhar/mean-stack-examples/files/10696162/01-MEAN.Stack.Intro.pdf)
 2. [HTML5 & CSS3.pdf](https://github.com/balasasidhar/mean-stack-examples/files/10696163/HTML5.CSS3.pdf)
+3. [JS & AJS.pdf](https://github.com/balasasidhar/mean-stack-examples/files/10823378/JS.AJS.pdf)
+4. [JS & ES6.pdf](https://github.com/balasasidhar/mean-stack-examples/files/10823383/JS.ES6.pdf)
+
 
 
 ### Tools
