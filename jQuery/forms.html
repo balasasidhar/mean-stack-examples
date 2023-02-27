@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery forms</title>
+    <style>
+      #errorMsg {
+        display: none;
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <h2 id="loginText">Please login</h2>
+    <form id="loginForm">
+      <h3>Login</h3>
+      <label for="email">Email</label>
+      <br />
+      <input type="email" name="email" id="email" />
+      <br />
+      <br />
+      <label for="password">Password</label>
+      <br />
+      <input type="password" name="password" id="password" />
+      <br /><br />
+      <button type="button" id="btnLogin">Login</button>
+      <p id="errorMsg">Invalid credentials</p>
+    </form>
+    <script>
+      function doLogin() {
+        var emailVal = $('#email').val(); // document.getElementById("email").value()
+        var passwordVal = $('#password').val();
+
+        if (emailVal === 'user@gmail.com' && passwordVal === '123456') {
+          // valid credentials
+          $('#loginText').text('Welcome User!');
+          $('#loginForm').hide();
+        } else {
+          // invalid credentials
+          $('#errorMsg').show();
+        }
+      }
+
+      function onDOMReady() {
+        $('#btnLogin').click(doLogin);
+      }
+
+      $(onDOMReady);
+    </script>
+  </body>
+</html>

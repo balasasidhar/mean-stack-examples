@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1 id="heading">Hello World</h1>
+
+    <section>
+      <p>
+        In publishing and graphic design, Lorem ipsum is a placeholder text
+        commonly used to demonstrate the visual form of a document or a typeface
+        without relying on meaningful content. Lorem ipsum may be used as a
+        placeholder before final copy is available.
+      </p>
+    </section>
+
+    <script>
+      function onDOMReady() {
+        // console.log('Your DOM is ready.');
+        const headingTextValue = $('#heading').text();
+        console.log(headingTextValue);
+        $('#heading').text('Hello Shiva');
+
+        const sectionHTMLValue = $('section').html();
+        console.log(sectionHTMLValue);
+
+        $('section').html(
+          '<h5> placeholder before final copy is available</h5>'
+        );
+      }
+
+      $(onDOMReady);
+    </script>
+  </body>
+</html>
