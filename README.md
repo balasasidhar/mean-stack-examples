@@ -11,3 +11,8 @@
 ### Tools
 1. [NodeJS](https://nodejs.org/en/)
 2. [VS Code](https://code.visualstudio.com/)
+
+
+### Assignments
+1. [ToDo App](https://github.com/balasasidhar/mean-stack-examples/files/10849707/todo-app.pdf)
+
