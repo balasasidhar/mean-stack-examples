@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>My ToDo List</h1>
+    <button type="button" id="myBtn">Refresh</button>
+    <ul id="todoList"></ul>
+
+    <script>
+      function updateUI(todos) {
+        for (var i = 0; i < todos.length; i++) {
+          var todoItem = todos[i];
+          const liItemHTML = '<li>' + todoItem.title + '</li>';
+          $('#todoList').append(liItemHTML);
+        }
+      }
+
+      function getTodos() {
+        $.get('https://jsonplaceholder.typicode.com/todos', function (data) {
+          updateUI(data);
+        });
+      }
+
+      $('#myBtn').click(getTodos);
+    </script>
+  </body>
+</html>

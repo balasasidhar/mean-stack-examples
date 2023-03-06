@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations - jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: coral;
+        padding: 16px;
+        border: 4px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <br />
+    <button id="btn1">Update Width</button>
+    <button id="btn2">Update Width with Animation</button>
+    <button id="btnShow">Show</button>
+    <button id="btnHide">Hide</button>
+
+    <button id="btnSlideDown">Slide Down</button>
+    <button id="btnSlideUp">Slide Up</button>
+
+    <script>
+      $(function () {
+        $('#btn1').click(function () {
+          $('.box').css({ width: 600 });
+        });
+
+        $('#btn2').click(function () {
+          $('.box').animate({ width: 600 }, 2000, 'swing', function () {
+            console.log('Animation completed');
+          });
+        });
+
+        $('#btnShow').click(function () {
+          $('.box').show(1000, function () {
+            console.log('Box Shown');
+          });
+        });
+
+        $('#btnHide').click(function () {
+          $('.box').hide(1000, function () {
+            console.log('Box hidden');
+          });
+        });
+
+        $('#btnSlideDown').click(function () {
+          $('.box').slideDown(1000);
+        });
+
+        $('#btnSlideUp').click(function () {
+          $('.box').slideUp(1000);
+        });
+      });
+    </script>
+  </body>
+</html>

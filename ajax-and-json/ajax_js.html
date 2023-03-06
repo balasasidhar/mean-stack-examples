@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX JS</title>
+  </head>
+  <body>
+    <h1>My ToDo List</h1>
+    <button type="button" id="myBtn" onclick="getTodos()">Refresh</button>
+    <ul>
+      <li>ToDo 1</li>
+      <li>ToDo 2</li>
+      <li>ToDo 3</li>
+    </ul>
+
+    <script>
+      function responseHandler(data) {
+        if (data.target.readyState === 4 && data.target.status === 200) {
+          var jsonObj = JSON.parse(data.target.response);
+          console.log(jsonObj);
+        }
+      }
+
+      function getTodos() {
+        var req = new XMLHttpRequest();
+        req.addEventListener('load', responseHandler);
+        req.open('GET', 'https://jsonplaceholder.typicode.com/todos');
+        req.send();
+      }
+    </script>
+  </body>
+</html>

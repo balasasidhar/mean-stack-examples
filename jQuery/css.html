@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: coral;
+        padding: 16px;
+        border: 4px solid;
+      }
+
+      .red {
+        background-color: red;
+      }
+
+      .purple {
+        background-color: purple;
+      }
+
+      .black {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <br /><br />
+    <button id="btnRed">Add Red</button>
+    <button id="btnPurple">Add Purple</button>
+    <button id="btnBlack">Add Black</button>
+    <br />
+    <br />
+    <button id="btnRemoveRed">Remove Red</button>
+    <button id="btnRemovePurple">Remove Purple</button>
+    <button id="btnRemoveBlack">Remove Black</button>
+    <br />
+    <br />
+    <button id="btnToggleBlack">Toggle Black</button>
+
+    <script>
+      $(function () {
+        $('#btnRed').click(function () {
+          $('.box').addClass('red');
+        });
+
+        $('#btnPurple').click(function () {
+          $('.box').addClass('purple');
+        });
+
+        $('#btnBlack').click(function () {
+          $('.box').addClass('black');
+        });
+
+        $('#btnRemoveRed').click(function () {
+          $('.box').removeClass('red');
+        });
+
+        $('#btnRemovePurple').click(function () {
+          $('.box').removeClass('purple');
+        });
+
+        $('#btnRemoveBlack').click(function () {
+          $('.box').removeClass('black');
+        });
+
+        $('#btnToggleBlack').click(function () {
+          $('.box').toggleClass('black');
+        });
+      });
+    </script>
+  </body>
+</html>
