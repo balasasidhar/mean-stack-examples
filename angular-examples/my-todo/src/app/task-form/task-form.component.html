@@ -1,0 +1,10 @@
+<form class="taskForm">
+  <input
+    type="text"
+    name="taskName"
+    id="taskName"
+    placeholder="Add your todo here"
+    [(ngModel)]="taskInputVal"
+  />
+  <button type="button" (click)="onAddClicked()">Add</button>
+</form>

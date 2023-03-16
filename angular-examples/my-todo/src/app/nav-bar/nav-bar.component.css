@@ -1,0 +1,12 @@
+nav {
+    background-color: #2F80ED;
+    height: 64px;
+    padding: 0 24px;
+}
+
+nav h1{
+    color: #fff;
+    line-height: 64px;
+    font-weight: bold;
+    font-size: 24px;
+}

@@ -1,0 +1,10 @@
+<div class="done-list-container">
+  <h2>Your Done list items</h2>
+  <ul>
+    <li *ngFor="let item of doneList">
+      <input type="checkbox" />&nbsp;
+      <label>{{ item.title }}</label>
+      <small>&nbsp; - {{ item.completedAt?.toLocaleDateString() }}</small>
+    </li>
+  </ul>
+</div>

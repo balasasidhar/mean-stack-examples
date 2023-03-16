@@ -1,0 +1,10 @@
+<div class="todo-list-container">
+  <h2>Your Todo list items</h2>
+  <ul>
+    <li *ngFor="let item of todoList">
+      <input type="checkbox" /> &nbsp;
+      <label>{{ item.title }}</label>
+      <small>&nbsp; - {{ item.createdAt?.toLocaleDateString() }}</small>
+    </li>
+  </ul>
+</div>
