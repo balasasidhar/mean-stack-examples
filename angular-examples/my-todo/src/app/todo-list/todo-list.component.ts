@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { todoListItems } from 'src/mock-data/todo-list.mock';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { TodoItem } from 'src/models/todo-item.model';
 
 @Component({
   selector: 'app-todo-list',
@@ -7,5 +7,14 @@ import { todoListItems } from 'src/mock-data/todo-list.mock';
   styleUrls: ['./todo-list.component.css'],
 })
 export class TodoListComponent {
-  todoList = todoListItems;
+  @Input() todoListItems: TodoItem[] = [];
+
+  @Output() markAsDone = new EventEmitter<TodoItem>();
+
+  onCheckboxChanged(todoItem: TodoItem) {
+    console.log(todoItem);
+    todoItem.isCompleted = true;
+    todoItem.completedAt = new Date();
+    this.markAsDone.emit(todoItem);
+  }
 }

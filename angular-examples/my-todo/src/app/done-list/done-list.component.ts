@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { doneListItems } from 'src/mock-data/done-list.mock';
+import { Component, Input } from '@angular/core';
+import { TodoItem } from 'src/models/todo-item.model';
 
 @Component({
   selector: 'app-done-list',
@@ -7,5 +7,5 @@ import { doneListItems } from 'src/mock-data/done-list.mock';
   styleUrls: ['./done-list.component.css'],
 })
 export class DoneListComponent {
-  doneList = doneListItems;
+  @Input() doneListItems: TodoItem[] = [];
 }
