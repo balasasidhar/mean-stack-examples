@@ -1,4 +1,4 @@
-<app-nav-bar></app-nav-bar>
+<app-nav-bar [navTitle]="title"></app-nav-bar>
 
 <div class="container">
   <app-task-form (addNewTodoItem)="addNewTodo($event)"></app-task-form>
@@ -6,7 +6,10 @@
     [todoListItems]="todoList"
     (markAsDone)="markAsDone($event)"
   ></app-todo-list>
-  <app-done-list [doneListItems]="doneList"></app-done-list>
+  <app-done-list
+    [doneListItems]="doneList"
+    (markAsTodo)="markAsTodo($event)"
+  ></app-done-list>
 </div>
 
 <router-outlet></router-outlet>

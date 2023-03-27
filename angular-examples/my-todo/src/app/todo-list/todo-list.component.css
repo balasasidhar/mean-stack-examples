@@ -5,3 +5,15 @@
 .todo-list-container h2 {
     font-weight: bold;
 }
+
+.todo-list-container li{
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 16px;
+    margin-top: 8px;
+    border-radius: 8px;
+}
+
+.deleteIcon{
+    float: right;
+}

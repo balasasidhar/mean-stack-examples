@@ -8,6 +8,8 @@
         (change)="onCheckboxChanged(todoItem)"
       />&nbsp; <label>{{ todoItem.title }}</label> &nbsp;
       <small>- {{ todoItem.createdAt | date }}</small>
+
+      <span class="deleteIcon material-symbols-outlined"> delete </span>
     </li>
   </ul>
 </div>

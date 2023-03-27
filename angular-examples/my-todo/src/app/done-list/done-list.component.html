@@ -2,7 +2,11 @@
   <h2>Your Done list items</h2>
   <ul>
     <li *ngFor="let item of doneListItems">
-      <input type="checkbox" [checked]="item.isCompleted" />&nbsp;
+      <input
+        type="checkbox"
+        [checked]="item.isCompleted"
+        (change)="onCheckboxChanged(item)"
+      />&nbsp;
       <label>{{ item.title }}</label>
       <small>&nbsp; - {{ item.completedAt?.toLocaleDateString() }}</small>
     </li>
