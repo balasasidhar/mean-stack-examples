@@ -10,7 +10,13 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { DoneListComponent } from './done-list/done-list.component';
 
 @NgModule({
-  declarations: [AppComponent, NavBarComponent, TaskFormComponent, TodoListComponent, DoneListComponent],
+  declarations: [
+    AppComponent,
+    NavBarComponent,
+    TaskFormComponent,
+    TodoListComponent,
+    DoneListComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

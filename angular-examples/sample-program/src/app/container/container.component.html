@@ -1,0 +1,34 @@
+<h1>Hello, {{ user.firstName }} {{ user.lastName }}!</h1>
+
+<img
+  [src]="user.profilePicUrl"
+  [alt]="user.firstName"
+  width="200px"
+  height="200px"
+/>
+
+<button type="button" [ariaLabel]="sendEmailLabel" (click)="sendEmail()">
+  Send Email
+</button>
+
+<h3 [style.color]="user.isActive ? 'green' : 'red'">
+  {{ user.firstName }}
+</h3>
+
+<div [class.isSpecial]="user.isActive">This is a Special class</div>
+
+<input placeholder="username" type="text" [(ngModel)]="username" />
+
+<h3 [ngStyle]="{ color: user.isActive ? 'green' : 'red' }">
+  {{ user.firstName }}
+</h3>
+
+<div [ngClass]="user.isActive ? 'isSpecial' : ''">This is a Special class</div>
+
+<h3 *ngIf="user.isActive">You are Online</h3>
+<h3 *ngIf="!user.isActive">You are Offline</h3>
+
+<div [ngSwitch]="user.isActive">
+  <h3 *ngSwitchCase="true">You are Online</h3>
+  <h3 *ngSwitchDefault>You are Offline</h3>
+</div>
