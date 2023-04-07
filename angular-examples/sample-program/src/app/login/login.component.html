@@ -1,0 +1,50 @@
+<div class="container" *ngIf="!isLoggedIn">
+  <div class="row justify-content-center">
+    <div class="col-5">
+      <div class="card">
+        <div class="card-header">Login</div>
+        <div class="card-body">
+          <form action="" (ngSubmit)="onSubmitClicked()">
+            <div class="mb-3">
+              <label for="eamilFormControlInput" class="form-label">
+                Email address
+              </label>
+              <input
+                type="email"
+                class="form-control"
+                id="eamilFormControlInput"
+                placeholder="Enter email"
+                [(ngModel)]="email"
+                name="email"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="passwordFormControlInput" class="form-label">
+                Password
+              </label>
+              <input
+                type="password"
+                class="form-control"
+                id="passwordFormControlInput"
+                placeholder="Enter password"
+                [(ngModel)]="password"
+                name="password"
+              />
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="isLoggedIn">
+  <div class="row">
+    <div class="col">
+      <h1>Hello {{ email }}</h1>
+    </div>
+  </div>
+</div>

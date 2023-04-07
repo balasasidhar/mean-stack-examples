@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Email address</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+          [(ngModel)]="emailAddress"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"
+          >Email Body</label
+        >
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+          #emailBody
+        ></textarea>
+      </div>
+      <button
+        type="button"
+        class="mb-3 btn btn-primary"
+        (click)="onSubmitHandler()"
+      >
+        Send Email
+      </button>
+
+      <button (click)="toggleStatus()" class="btn btn-info mb-3 ms-2">
+        Toggle Status
+      </button>
+
+      <div
+        class="alert alert-success"
+        role="alert"
+        *ngIf="isOnline; else offlineTemplate"
+      >
+        User is online!
+      </div>
+
+      <ng-template #offlineTemplate>
+        <div class="alert alert-danger" role="alert">User is offline!</div>
+      </ng-template>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-warning" (click)="toggleTimer()">
+        {{ showTimer ? "Stop timer" : "Start Timer" }}
+      </button>
+
+      <app-timer *ngIf="showTimer"></app-timer>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
