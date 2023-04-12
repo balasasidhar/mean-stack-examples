@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { UserService } from 'src/services/user.service';
+import { IUser } from 'src/models/user.model';
 
 @Component({
   selector: 'app-users',
@@ -7,40 +9,13 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./users.component.css'],
 })
 export class UsersComponent {
-  users: any = [];
+  users: IUser[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private userService: UserService) {}
 
   ngOnInit() {
-    this.getUsers();
-  }
-
-  handleServerResponse(response: any) {
-    this.users = response;
-  }
-
-  getUsers() {
-    this.http
-      .get('https://jsonplaceholder.typicode.com/users')
-      .subscribe(this.handleServerResponse.bind(this));
-  }
-
-  saveUser() {
-    this.http.post('https://jsonplaceholder.typicode.com/users', {
-      name: 'test nme',
-      username: 'testname',
-      phone: 1234567,
-      email: 'test@example.com',
-    });
-  }
-
-  updateUser() {
-    const userId = 1;
-    this.http.put(`https://jsonplaceholder.typicode.com/users/${userId}`, {
-      name: 'test nme',
-      username: 'testname',
-      phone: 1234567,
-      email: 'test@example.com',
+    this.userService.getUsers().subscribe((data: IUser[]) => {
+      this.users = data;
     });
   }
 }
