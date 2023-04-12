@@ -1,10 +1,24 @@
-<form class="taskForm">
-  <input
-    type="text"
-    name="taskName"
-    id="taskName"
-    placeholder="Add your todo here"
-    [(ngModel)]="taskInputVal"
-  />
-  <button type="button" (click)="onAddClicked()">Add</button>
-</form>
+<div class="container mb-3">
+  <form class="row g-3">
+    <div class="col-10">
+      <label for="taskName" class="visually-hidden">Password</label>
+      <input
+        type="text"
+        name="taskName"
+        id="taskName"
+        placeholder="Add your todo here"
+        [(ngModel)]="taskInputVal"
+        class="form-control"
+      />
+    </div>
+    <div class="col-2 d-grid">
+      <button
+        type="submit"
+        class="btn btn-success mb-3"
+        (click)="onAddClicked()"
+      >
+        Add
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,14 +1,31 @@
-<div class="done-list-container">
-  <h2>Your Done list items</h2>
-  <ul>
-    <li *ngFor="let item of doneListItems">
-      <input
-        type="checkbox"
-        [checked]="item.isCompleted"
-        (change)="onCheckboxChanged(item)"
-      />&nbsp;
-      <label>{{ item.title }}</label>
-      <small>&nbsp; - {{ item.completedAt?.toLocaleDateString() }}</small>
-    </li>
-  </ul>
+<div class="container mb-3">
+  <div class="row">
+    <div class="col">
+      <h3>Your Todo list items</h3>
+      <ul class="list-group">
+        <li *ngFor="let todoItem of doneListItems" class="list-group-item">
+          <div class="row align-items-center">
+            <div class="col">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                  [checked]="todoItem.isCompleted"
+                  (change)="onCheckboxChanged(todoItem)"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  {{ todoItem.title }}
+                </label>
+              </div>
+            </div>
+            <div class="col-auto">
+              <span class="deleteIcon material-symbols-outlined"> delete </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>

@@ -1,15 +1,9 @@
 <app-nav-bar [navTitle]="title"></app-nav-bar>
 
 <div class="container">
-  <app-task-form (addNewTodoItem)="addNewTodo($event)"></app-task-form>
-  <app-todo-list
-    [todoListItems]="todoList"
-    (markAsDone)="markAsDone($event)"
-  ></app-todo-list>
-  <app-done-list
-    [doneListItems]="doneList"
-    (markAsTodo)="markAsTodo($event)"
-  ></app-done-list>
+  <app-task-form></app-task-form>
+  <app-todo-list></app-todo-list>
+  <app-done-list></app-done-list>
 </div>
 
 <router-outlet></router-outlet>

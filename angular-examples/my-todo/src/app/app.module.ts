@@ -8,6 +8,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { TaskFormComponent } from './task-form/task-form.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { DoneListComponent } from './done-list/done-list.component';
+import { TodoService } from './services/todo.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { DoneListComponent } from './done-list/done-list.component';
     DoneListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

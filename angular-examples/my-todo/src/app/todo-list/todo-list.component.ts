@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { TodoItem } from 'src/models/todo-item.model';
+import { TodoService } from '../services/todo.service';
 
 @Component({
   selector: 'app-todo-list',
@@ -7,14 +8,19 @@ import { TodoItem } from 'src/models/todo-item.model';
   styleUrls: ['./todo-list.component.css'],
 })
 export class TodoListComponent {
-  @Input() todoListItems: TodoItem[] = [];
+  todoListItems: TodoItem[] = [];
 
-  @Output() markAsDone = new EventEmitter<TodoItem>();
+  constructor(private todoService: TodoService) {}
+
+  ngOnInit() {
+    this.todoListItems = this.todoService.getTodos();
+  }
 
   onCheckboxChanged(todoItem: TodoItem) {
-    console.log(todoItem);
-    todoItem.isCompleted = true;
-    todoItem.completedAt = new Date();
-    this.markAsDone.emit(todoItem);
+    this.todoService.toggleTodo(todoItem, true);
+  }
+
+  onDeleteClicked(todoItem: TodoItem) {
+    this.todoService.deleteTodo(todoItem);
   }
 }

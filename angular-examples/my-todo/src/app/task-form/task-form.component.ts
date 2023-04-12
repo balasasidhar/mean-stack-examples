@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { TodoItem } from 'src/models/todo-item.model';
+import { Component } from '@angular/core';
+import { TodoService } from '../services/todo.service';
 
 @Component({
   selector: 'app-task-form',
@@ -9,7 +9,7 @@ import { TodoItem } from 'src/models/todo-item.model';
 export class TaskFormComponent {
   taskInputVal = '';
 
-  @Output() addNewTodoItem = new EventEmitter<TodoItem>();
+  constructor(private todoService: TodoService) {}
 
   onAddClicked() {
     // null/empty check
@@ -17,14 +17,7 @@ export class TaskFormComponent {
       return alert('Please enter your todo title');
     }
 
-    let todoObj: TodoItem = {
-      id: Date.now(),
-      title: this.taskInputVal,
-      createdAt: new Date(),
-      isCompleted: false,
-    };
-    console.log(todoObj);
-    this.addNewTodoItem.emit(todoObj);
+    this.todoService.createTodo(this.taskInputVal.trim());
     this.taskInputVal = '';
   }
 }
