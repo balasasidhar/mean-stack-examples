@@ -20,9 +20,9 @@ export class UserDetailsComponent {
   ) {}
 
   ngOnInit() {
-    this.route.queryParams.subscribe((query) => {
-      const { userId } = query;
-      this.userService.getUserDetails(userId).subscribe((resp) => {
+    this.route.params.subscribe((params) => {
+      const { id } = params;
+      this.userService.getUserDetails(id).subscribe((resp) => {
         this.userDetails = resp;
         this.isLoading = false;
       });

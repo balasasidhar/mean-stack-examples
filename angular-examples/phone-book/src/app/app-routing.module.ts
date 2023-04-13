@@ -5,8 +5,16 @@ import { AlbumsComponent } from './albums/albums.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 
 const routes: Routes = [
-  { path: 'users', component: UsersComponent },
-  { path: 'user-details', component: UserDetailsComponent },
+  {
+    path: 'users',
+    component: UsersComponent,
+    children: [
+      {
+        path: ':id', // users/123 --> 123 -- userId
+        component: UserDetailsComponent,
+      },
+    ],
+  },
   { path: 'albums', component: AlbumsComponent },
 ];
 
